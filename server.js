@@ -11,7 +11,12 @@ const app = express();
 const PORT = process.env.PORT;
 
 // Middlewares
-app.use(cors());
+app.use(
+	cors({
+		origin: ["https://www.luniversdemm.store/"],
+		optionsSuccessStatus: 200, // For legacy browser support
+	})
+);
 app.use(express.json());
 
 app.use("/api", require(listes));
