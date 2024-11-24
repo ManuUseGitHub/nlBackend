@@ -14,9 +14,9 @@ const PORT = process.env.PORT;
 app.use(cors());
 app.use(express.json());
 
-app.use("/api", require(listes));
-app.use("/api/presets", require(presets));
-app.use("/api/filters", require(filters));
+app.use("/", require(listes));
+app.use("/presets", require(presets));
+app.use("/filters", require(filters));
 
 app.listen(PORT, (error) => {
 	if (!error)
