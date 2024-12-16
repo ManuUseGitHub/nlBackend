@@ -9,19 +9,20 @@ const filters = "./routes/filterRoute.js";
 
 const app = express();
 const PORT = process.env.PORT;
+const API_VERSION_ID = "api/V1";
 
 // Middlewares
 app.use(
 	cors({
-		origin: ["https://www.luniversdemm.store/"],
+		origin: ["https://www.luniversdemm.store/", "http://localhost:4201"],
 		optionsSuccessStatus: 200, // For legacy browser support
 	})
 );
 app.use(express.json());
 
-app.use("/api", require(listes));
-app.use("/api/presets", require(presets));
-app.use("/api/filters", require(filters));
+app.use("/" + API_VERSION_ID, require(listes));
+app.use("/" + API_VERSION_ID + "/presets", require(presets));
+app.use("/" + API_VERSION_ID + "/filters", require(filters));
 
 app.listen(PORT, (error) => {
 	if (!error)
