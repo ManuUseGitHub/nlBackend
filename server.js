@@ -14,7 +14,7 @@ const API_VERSION_ID = "api/V1";
 // Middlewares
 app.use(
 	cors({
-		origin: ["https://www.luniversdemm.store/", "http://localhost:4201"],
+		origin: ["https://luniversdemm.store/", "http://localhost"],
 		optionsSuccessStatus: 200, // For legacy browser support
 	})
 );
