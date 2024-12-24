@@ -65,8 +65,6 @@ app.use((req, res, next) => {
 // JSON body parsing middleware
 app.use(express.json());
 
-app.use(express.json());
-
 app.use("/" + API_VERSION_ID, require(listes));
 app.use("/" + process.env.API_SUB_PATH, require(listes));
 
