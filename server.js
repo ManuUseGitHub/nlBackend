@@ -7,10 +7,12 @@ require("dotenv/config");
 const listes = "./routes/listRoute.js";
 const presets = "./routes/presetRoute.js";
 const filters = "./routes/filterRoute.js";
+const files = "./routes/fileRoute.js";
 
 const app = express();
 const PORT = process.env.PORT;
 const API_VERSION_ID = btaatob.utf8ToHex(process.env.API_SUB_PATH);
+console.log(API_VERSION_ID);
 
 // CORS middleware
 app.use(
@@ -73,6 +75,9 @@ app.use("/" + process.env.API_SUB_PATH + "/presets", require(presets));
 
 app.use("/" + API_VERSION_ID + "/filters", require(filters));
 app.use("/" + process.env.API_SUB_PATH + "/filters", require(filters));
+
+app.use("/" + API_VERSION_ID + "/files", require(files));
+app.use("/" + process.env.API_SUB_PATH + "/files", require(files));
 
 app.listen(PORT, (error) => {
 	if (!error)
