@@ -6,13 +6,13 @@ const paths = getFilesSource(folder, "json");
 
 const getResetCharacteristics = () => {
 	const collectionsNames = [
-		"article",
-		"type",
+		"articles",
+		"types",
 		"themes",
 		"parts",
 		"chapters",
 		"tags",
-		"difficulty",
+		"difficulties",
 		"files",
 	];
 	const characteristics = require("./assets/database/filters/characteristics.json");
@@ -43,14 +43,13 @@ const getPluralKey = (name, characteristics) => {
 const replaceCharacteristics = (cb) => {
 	const characteristics = getResetCharacteristics();
 
-	paths.forEach((fileName) => {
+	const dbFiles = paths.filter((name) => /^.*\/db[^\/]+$/.test(name));
+
+	dbFiles.forEach((fileName) => {
 		const data = JSON.parse(fs.readFileSync(fileName));
-
-		Object.entries(data).map(([key, entries]) => {
-			console.log(entries);
-
-			characteristics.files.push(key);
-			entries.forEach((entry) => {
+		let cpt = 0;
+		Object.entries(data).map(([key, entry]) => {
+			try {
 				Object.keys(entry).forEach((c) => {
 					const characteristic = entry[c];
 					const matching = getPluralKey(c, characteristics);
@@ -62,7 +61,11 @@ const replaceCharacteristics = (cb) => {
 						pushNewCharacteristics(matching, characteristics, characteristic);
 					}
 				});
-			});
+			} catch (err) {
+				if (cpt++ == 0) {
+					console.log(err, key, entry);
+				}
+			}
 		});
 	});
 	fs.writeFile(
@@ -74,7 +77,7 @@ const replaceCharacteristics = (cb) => {
 			if (err) {
 				console.error(err);
 			} else {
-				console.log("finished !");
+				//console.log("finished !");
 				cb(characteristics);
 			}
 		}

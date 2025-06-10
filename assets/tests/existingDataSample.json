@@ -1,0 +1,55 @@
+{
+    "Eten & drinken": [
+        {
+            "dutch": "Taak: Schrif het keukengerei in de tabel rechets van de tekening.",
+            "french": "Tâche : Inscrivez les ustensiles de cuisine dans le tableau à droite du dessin.",
+            "id": "77a1840d-4580-4a5c-9daa-45d0ddf14b0d",
+            "theme": "Eten & drinken",
+            "type": "task"
+        },
+        {
+            "dutch": "bord",
+            "french": "L'assiette",
+            "id": "98837912-23f9-486d-9ef7-a8d61447245b",
+            "theme": "Eten & drinken",
+            "type": null
+        },
+        {
+            "dutch": "De lepel",
+            "french": "La cuillère",
+            "id": "ed528cca-96a8-488b-8fcb-4e504c522a24",
+            "theme": "Eten & drinken",
+            "type": null
+        },
+        {
+            "dutch": "Het mes",
+            "french": "Le couteau",
+            "id": "0e8d20e6-4626-4878-aba3-c6746772e163",
+            "theme": "Eten & drinken",
+            "type": null
+        }
+    ],
+    "phrases": [
+        {
+            "dutch": "In welk jaar ben je geboren?",
+            "french": "En quelle année es-tu né(e) ?",
+            "id": "fc62c8aa-7685-40f7-b275-994d81205c74",
+            "tags": []
+        },
+        {
+            "dutch": "In welke maand ben je geboren?",
+            "french": "Dans quel mois es-tu né(e) ?",
+            "id": "3b45f289-4376-4afe-a5c5-b59ebd9976ff"
+        },
+        {
+            "dutch": "Hoe heet je?",
+            "french": "Comment tu t'appelles ?",
+            "id": "1700319e-0643-4e15-a997-10732b0c727b"
+        },
+        {
+            "dutch": "Hoe oud ben jij?",
+            "french": "Quel âge as-tu ?",
+            "id": "1af7b943-b7b6-4eb0-a529-884dbb14a2eb"
+        }
+    ]
+}

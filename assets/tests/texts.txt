@@ -1,0 +1,31 @@
+--TEXT1
+"Hello, world"
+"the name is; Pat"
+--RESULT1
+Hello, world
+the name is﹔ Pat
+--TEXT2
+"We call him \"The cleaner\"!"
+--RESULT2
+We call him "The cleaner"!
+--TEXT3
+"Best curtist
+Ken je me nog? Ik ben Arthur.
+Vorig week zijn mijn vrouw en mijn twee zonen in België aangekomen. Mijn gezin is dus weer samen.
+Mijn jongste broer heet Lucas en mijn jongste zus Emma. Ze studeren nog en wonen bij mijn ouders. Mijn broer Louis en mijn zus Clara zijn al getrouwd en werken allebei als journalist. Mijn schoonzus, Sonia, is Lerares."
+--RESULT3
+Best curtist
+Ken je me nog?
+Ik ben Arthur.
+Vorig week zijn mijn vrouw en mijn twee zonen in België aangekomen.
+Mijn gezin is dus weer samen.
+Mijn jongste broer heet Lucas en mijn jongste zus Emma.
+Ze studeren nog en wonen bij mijn ouders.
+Mijn broer Louis en mijn zus Clara zijn al getrouwd en werken allebei als journalist.
+Mijn schoonzus, Sonia, is Lerares.
+--TEXT4
+Mail me a.u.b. terug en vertel me over jouw familie!
+Mijn jongste broer heet Lucas en mijn jongste zus Emma.
+--RESULT4
+Mail me a.u.b. terug en vertel me over jouw familie!
+Mijn jongste broer heet Lucas en mijn jongste zus Emma.
